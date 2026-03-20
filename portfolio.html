@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yannis Poder - Portfolio - Game Programmer</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#8B5CF6",
+                            secondary: "#EC4899",
+                            dark: "#0F172A",
+                            darker: "#0B111E",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #0f172a 0%, #0b111e 100%);
+                color: #f1f5f9;
+            }
+            .project-card {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.2);
+            }
+            .skill-badge {
+                transition: all 0.3s ease;
+            }
+            .skill-badge:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <header
+            class="sticky top-0 z-50 bg-dark/80 backdrop-blur-sm border-b border-gray-800"
+        >
+            <div
+                class="container mx-auto px-4 py-4 flex justify-between items-center"
+            >
+                <div
+                    class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                >
+                    Yannis Poder
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a
+                        href="#about"
+                        class="hover:text-purple-400 transition-colors"
+                        >À propos</a
+                    >
+                    <a
+                        href="#projects"
+                        class="hover:text-purple-400 transition-colors"
+                        >Projets</a
+                    >
+                    <a
+                        href="#skills"
+                        class="hover:text-purple-400 transition-colors"
+                        >Compétences</a
+                    >
+                    <a
+                        href="#cv"
+                        class="hover:text-purple-400 transition-colors"
+                        >CV</a
+                    >
+                    <a
+                        href="#contact"
+                        class="hover:text-purple-400 transition-colors"
+                        >Contact</a
+                    >
+                </nav>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="py-20 px-4">
+            <div class="container mx-auto text-center max-w-4xl">
+                <div class="flex justify-center mb-8">
+                    <div class="relative">
+                        <img
+                            src="image_0.png"
+                            alt="Photo de Yannis Poder"
+                            class="w-48 h-48 rounded-full object-cover border-4 border-purple-500/30"
+                        />
+                        <div
+                            class="absolute -bottom-2 -right-2 bg-purple-600 rounded-full p-3"
+                        >
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Développeur de
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Jeux Vidéo</span
+                    >
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Passionné par la programmation de jeux vidéo, je cherche un
+                    stage pour approfondir mes compétences techniques
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a
+                        href="#projects"
+                        class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+                    >
+                        Voir mes projets
+                    </a>
+                    <a
+                        href="#contact"
+                        class="px-8 py-3 border border-purple-500 rounded-full font-semibold hover:bg-purple-500/10 transition-all"
+                    >
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-4 bg-darker">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Mon Parcours</span
+                    >
+                </h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <div
+                            class="bg-gray-800 rounded-2xl p-6 border border-gray-700"
+                        >
+                            <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                                <div
+                                    class="bg-gray-700 rounded-lg w-16 h-16 flex items-center justify-center mb-4"
+                                >
+                                    <i
+                                        class="fas fa-graduation-cap text-purple-400 text-2xl"
+                                    ></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">
+                                    Formation
+                                </h3>
+                                <p class="text-gray-300">
+                                    2ème année au Gaming Campus
+                                </p>
+                                <p class="text-gray-400 text-sm">
+                                    Spécialisation : Game Programmer
+                                </p>
+                            </div>
+                            <div class="bg-gray-900 rounded-xl p-4">
+                                <div
+                                    class="bg-gray-700 rounded-lg w-16 h-16 flex items-center justify-center mb-4"
+                                >
+                                    <i
+                                        class="fas fa-code text-purple-400 text-2xl"
+                                    ></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Parcours</h3>
+                                <p class="text-gray-300">
+                                    3 ans Licence Mathématiques & Informatique
+                                </p>
+                                <p class="text-gray-400 text-sm">
+                                    Pivote vers le jeu vidéo pour le concret
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-6">
+                            De la rigueur mathématique au code concret
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            Après trois années d'études en mathématiques et
+                            informatique à l'Université Lyon 1, j'ai découvert
+                            la rigueur mathématique et algorithmique qui a forgé
+                            ma base solide. Le manque d'application concrète de
+                            cette théorie m'a motivé à pivoter vers le
+                            développement de jeux vidéo.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Le jeu vidéo m'a redonné le goût de la programmation
+                            : ici, la technique sert directement un résultat
+                            visuel et interactif. J'ai donc choisi de me former
+                            au Gaming Campus (G. Tech) pour concrétiser cette
+                            passion par le code.
+                        </p>
+                        <p class="text-gray-300">
+                            Ma formation m'a permis de développer une approche
+                            méthodique et rigoureuse de la programmation, tout
+                            en me familiarisant avec les outils et technologies
+                            du secteur du jeu vidéo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Mes Projets</span
+                    >
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="project-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-purple-500/50"
+                    >
+                        <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                            <div
+                                class="bg-purple-900/50 rounded-lg w-12 h-12 flex items-center justify-center mb-3"
+                            >
+                                <i class="fas fa-cube text-purple-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Moteur de Jeu Custom
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                C++ • DirectX 12
+                            </p>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Conception d'un moteur de jeu bas niveau avec l'API
+                            graphique DirectX 12.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Implémentation d'une architecture modulaire et
+                            performante pour le rendu et la gestion des
+                            ressources.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >C++</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >DirectX 12</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >Architecture</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-purple-500/50"
+                    >
+                        <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                            <div
+                                class="bg-pink-900/50 rounded-lg w-12 h-12 flex items-center justify-center mb-3"
+                            >
+                                <i
+                                    class="fas fa-network-wired text-pink-400"
+                                ></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Projet Multijoueur
+                            </h3>
+                            <p class="text-gray-400 text-sm">TCP/UDP</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Développement d'une solution réseau utilisant les
+                            protocoles TCP/UDP.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Implémentation de la synchronisation entre clients
+                            et serveur pour un gameplay cohérent.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-sm"
+                                >Réseau</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-sm"
+                                >TCP/UDP</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-sm"
+                                >Synchronisation</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-purple-500/50"
+                    >
+                        <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                            <div
+                                class="bg-purple-900/50 rounded-lg w-12 h-12 flex items-center justify-center mb-3"
+                            >
+                                <i
+                                    class="fas fa-crosshairs text-purple-400"
+                                ></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Arena Shooter
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                Gameplay Programming
+                            </p>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Programmation complète du gameplay d'un jeu de tir
+                            en arène.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Implémentation des mécaniques de combat, des
+                            systèmes de points de vie et de progression.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >Gameplay</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >Combat</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                                >Systèmes</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-purple-500/50"
+                    >
+                        <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                            <div
+                                class="bg-blue-900/50 rounded-lg w-12 h-12 flex items-center justify-center mb-3"
+                            >
+                                <i class="fas fa-gamepad text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Jeu de Combat (Université)
+                            </h3>
+                            <p class="text-gray-400 text-sm">SDL2</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Développement d'un jeu de combat en utilisant la
+                            bibliothèque SDL2.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Démonstration de capacité à travailler avec des
+                            outils bas niveau pour la gestion graphique et
+                            l'entrée utilisateur.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
+                                >SDL2</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
+                                >Low-Level</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
+                                >Input</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-purple-500/50"
+                    >
+                        <div class="bg-gray-900 rounded-xl p-4 mb-4">
+                            <div
+                                class="bg-green-900/50 rounded-lg w-12 h-12 flex items-center justify-center mb-3"
+                            >
+                                <i class="fas fa-globe text-green-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                Jeu Web (Université)
+                            </h3>
+                            <p class="text-gray-400 text-sm">Logique de base</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Projet d'introduction à la programmation de jeux
+                            avec des bases de logique.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Création d'un jeu interactif en utilisant des
+                            concepts de programmation de base.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm"
+                                >Logique</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm"
+                                >Basique</span
+                            >
+                            <span
+                                class="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm"
+                                >Interactif</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 px-4 bg-darker">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Compétences</span
+                    >
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-code text-purple-400 mr-3"></i>
+                            Langages
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-purple-900/30 text-purple-300 rounded-full"
+                                >C++</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-purple-900/30 text-purple-300 rounded-full"
+                                >Python</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-cube text-pink-400 mr-3"></i>
+                            Moteurs
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-pink-900/30 text-pink-300 rounded-full"
+                                >Unreal Engine</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-pink-900/30 text-pink-300 rounded-full"
+                                >Blueprints</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-desktop text-blue-400 mr-3"></i>
+                            API Graphiques
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-blue-900/30 text-blue-300 rounded-full"
+                                >DirectX 12</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i
+                                class="fas fa-network-wired text-green-400 mr-3"
+                            ></i>
+                            Réseau
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-green-900/30 text-green-300 rounded-full"
+                                >TCP</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-green-900/30 text-green-300 rounded-full"
+                                >UDP</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-green-900/30 text-green-300 rounded-full"
+                                >Synchronisation</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-gamepad text-yellow-400 mr-3"></i>
+                            Outils
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-yellow-900/30 text-yellow-300 rounded-full"
+                                >SDL2</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-yellow-900/30 text-yellow-300 rounded-full"
+                                >Git</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-yellow-900/30 text-yellow-300 rounded-full"
+                                >Visual Studio</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+                    >
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-cogs text-red-400 mr-3"></i>
+                            Concepts
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-badge px-4 py-2 bg-red-900/30 text-red-300 rounded-full"
+                                >Architecture</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-red-900/30 text-red-300 rounded-full"
+                                >Gameplay</span
+                            >
+                            <span
+                                class="skill-badge px-4 py-2 bg-red-900/30 text-red-300 rounded-full"
+                                >Performance</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="py-20 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Mon CV</span
+                    >
+                </h2>
+                <div
+                    class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 max-w-4xl mx-auto"
+                >
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">
+                                Informations Personnelles
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-400 text-sm"
+                                        >Nom Prénom</label
+                                    >
+                                    <p class="text-gray-300">Yannis Poder</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-sm"
+                                        >Email</label
+                                    >
+                                    <p class="text-gray-300">
+                                        yannis.poder@hotmail.com
+                                    </p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-sm"
+                                        >Téléphone</label
+                                    >
+                                    <p class="text-gray-300">07 83 36 56 94</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-sm"
+                                        >LinkedIn</label
+                                    >
+                                    <a
+                                        href="https://linkedin.com/in/yannis-poder-51bb403b8"
+                                        target="_blank"
+                                        class="text-purple-400 hover:text-purple-300 transition-colors"
+                                    >
+                                        Voir mon profil LinkedIn
+                                    </a>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-sm"
+                                        >Localisation</label
+                                    >
+                                    <p class="text-gray-300">Lyon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Profil</h3>
+                            <p class="text-gray-300 mb-6">
+                                Développeur de jeux vidéo passionné par la
+                                programmation et l'architecture logicielle. Avec
+                                une solide formation mathématique et
+                                algorithmique, je cherche à appliquer mes
+                                compétences techniques dans un environnement de
+                                développement de jeux vidéo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-6">Formation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-purple-300">
+                                    2ème année Gaming Campus
+                                </h4>
+                                <p class="text-gray-400 text-sm">
+                                    Spécialisation : Game Programmer
+                                </p>
+                                <p class="text-gray-300 text-sm">2025-2026</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-300">
+                                    Licence Mathématiques & Informatique
+                                </h4>
+                                <p class="text-gray-400 text-sm">
+                                    Université Lyon 1
+                                </p>
+                                <p class="text-gray-300 text-sm">2022-2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-6">Langues</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-full"
+                                >Français - Langue maternelle</span
+                            >
+                            <span
+                                class="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-full"
+                                >Anglais - Courant</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                    <span
+                        class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        >Prêt pour un stage ?</span
+                    >
+                </h2>
+                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                    Si vous recherchez un stagiaire passionné et motivé,
+                    n'hésitez pas à me contacter pour échanger sur mon profil et
+                    mes projets.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row justify-center gap-6 flex-wrap"
+                >
+                    <a
+                        href="mailto:yannis.poder@hotmail.com"
+                        class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+                    >
+                        <i class="fas fa-envelope mr-2"></i>
+                        Me contacter par email
+                    </a>
+                    <a
+                        href="https://github.com/YannisPoder"
+                        target="_blank"
+                        class="px-8 py-4 border border-purple-500 rounded-full font-semibold hover:bg-purple-500/10 transition-all"
+                    >
+                        <i class="fab fa-github mr-2"></i>
+                        Voir mon GitHub
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/yannis-poder-51bb403b8"
+                        target="_blank"
+                        class="px-8 py-4 border border-purple-500 rounded-full font-semibold hover:bg-purple-500/10 transition-all"
+                    >
+                        <i class="fab fa-linkedin mr-2"></i>
+                        Voir mon LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-10 px-4 border-t border-gray-800">
+            <div class="container mx-auto max-w-6xl text-center">
+                <p class="text-gray-400 mb-4">
+                    © 2026 Yannis Poder - Portfolio - Game Programmer. Tous
+                    droits réservés.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a
+                        href="https://github.com/YannisPoder"
+                        target="_blank"
+                        class="text-gray-400 hover:text-purple-400 transition-colors"
+                    >
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/yannis-poder-51bb403b8"
+                        target="_blank"
+                        class="text-gray-400 hover:text-purple-400 transition-colors"
+                    >
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a
+                        href="mailto:yannis.poder@hotmail.com"
+                        class="text-gray-400 hover:text-purple-400 transition-colors"
+                    >
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
