@@ -85,6 +85,15 @@
                         >Contact</a
                     >
                 </nav>
+                <div
+                    id="lang-switch"
+                    class="flex rounded-full border border-purple-500/50 overflow-hidden text-sm font-semibold"
+                    role="group"
+                    aria-label="Language / Langue"
+                >
+                    <button type="button" data-lang="fr" aria-pressed="true" class="px-3 py-1 bg-purple-600 text-white transition-colors">FR</button>
+                    <button type="button" data-lang="en" aria-pressed="false" class="px-3 py-1 text-gray-300 hover:text-white transition-colors">EN</button>
+                </div>
                 <button class="md:hidden text-white">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
@@ -177,7 +186,7 @@
                                 </div>
                                 <h3 class="text-xl font-bold mb-2">Parcours</h3>
                                 <p class="text-gray-300">
-                                    3 ans Licence Mathématiques & Informatique
+                                    3 ans en Licence Mathématiques & Informatique
                                 </p>
                                 <p class="text-gray-400 text-sm">
                                     Pivote vers le jeu vidéo pour le concret
@@ -744,7 +753,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-purple-300">
-                                    Licence Mathématiques & Informatique
+                                    Licence Mathématiques & Informatique (jusqu'au niveau L2)
                                 </h4>
                                 <p class="text-gray-400 text-sm">
                                     Université Lyon 1
@@ -842,5 +851,157 @@
                 </div>
             </div>
         </footer>
+        <script>
+            (function () {
+                var EN = {
+                    "À propos": "About",
+                    "Projets": "Projects",
+                    "Compétences": "Skills",
+                    "Développeur de": "Video Game",
+                    "Jeux Vidéo": "Developer",
+                    "Étudiant en 3ème année, passionné par la programmation de jeux vidéo, je cherche un stage pour approfondir mes compétences techniques": "Third-year student passionate about video game programming, looking for an internship to deepen my technical skills",
+                    "Voir mes projets": "View my projects",
+                    "Me contacter": "Contact me",
+                    "Mon Parcours": "My Journey",
+                    "Formation": "Education",
+                    "3ème année au Gaming Campus": "Third year at Gaming Campus",
+                    "Spécialisation : Game Programmer": "Specialisation: Game Programmer",
+                    "Parcours": "Background",
+                    "3 ans en Licence Mathématiques & Informatique": "3 years in a Bachelor's programme in Mathematics & Computer Science",
+                    "Pivote vers le jeu vidéo pour le concret": "Shifted to video games for concrete results",
+                    "De la rigueur mathématique au code concret": "From mathematical rigour to concrete code",
+                    "Après trois années d'études en mathématiques et informatique à l'Université Lyon 1, j'ai découvert la rigueur mathématique et algorithmique qui a forgé ma base solide. Le manque d'application concrète de cette théorie m'a motivé à pivoter vers le développement de jeux vidéo.": "After three years of studying mathematics and computer science at Université Lyon 1, I developed the mathematical and algorithmic rigour that built my solid foundation. The lack of concrete application of that theory motivated me to move towards video game development.",
+                    "Le jeu vidéo m'a redonné le goût de la programmation : ici, la technique sert directement un résultat visuel et interactif. J'ai donc choisi de me former au Gaming Campus (G. Tech) pour concrétiser cette passion par le code.": "Video games gave me back my taste for programming: here, technique directly serves a visual, interactive result. So I chose to train at Gaming Campus (G.Tech) to turn that passion into code.",
+                    "Ma formation m'a permis de développer une approche méthodique et rigoureuse de la programmation, tout en me familiarisant avec les outils et technologies du secteur du jeu vidéo. Aujourd'hui, je souhaite élargir mes compétences aux technologies immersives (VR/AR).": "My training has helped me develop a methodical and rigorous approach to programming, while getting familiar with the tools and technologies of the video game industry. Today, I want to broaden my skills to immersive technologies (VR/AR).",
+                    "Mes Projets": "My Projects",
+                    "Unity • Projet G Studio • Équipe de 9": "Unity • G Studio project • Team of 9",
+                    "Jeu d'horreur développé en 2 mois dans le cadre du projet G Studio de l'école, avec une équipe de 9 personnes (8 développeurs et 1 artiste).": "Horror game developed in 2 months as the school's G Studio project, with a team of 9 people (8 developers and 1 artist).",
+                    "Co-porteur du projet et lead tech : shaders, outils de debug, UI, mécaniques de jeu, pathfinding et IA de l'ennemi.": "Co-project lead and lead tech: shaders, debug tools, UI, gameplay mechanics, pathfinding and enemy AI.",
+                    "IA & Pathfinding": "AI & Pathfinding",
+                    "Outils de debug": "Debug tools",
+                    "Voir le code source": "View source code",
+                    "Moteur de Jeu Custom": "Custom Game Engine",
+                    "Conception d'un moteur de jeu bas niveau avec l'API graphique DirectX 12.": "Design of a low-level game engine using the DirectX 12 graphics API.",
+                    "Implémentation d'une architecture modulaire et performante pour le rendu et la gestion des ressources.": "Implementation of a modular, high-performance architecture for rendering and resource management.",
+                    "Projet Multijoueur": "Multiplayer Project",
+                    "Développement d'une solution réseau utilisant les protocoles TCP/UDP.": "Development of a networking solution using the TCP/UDP protocols.",
+                    "Implémentation de la synchronisation entre clients et serveur pour un gameplay cohérent.": "Implementation of client-server synchronisation for consistent gameplay.",
+                    "Réseau": "Networking",
+                    "Synchronisation": "Synchronisation",
+                    "Programmation complète du gameplay d'un jeu de tir en arène.": "Complete gameplay programming of an arena shooter.",
+                    "Implémentation des mécaniques de combat, des systèmes de points de vie et de progression.": "Implementation of combat mechanics, health point systems and progression.",
+                    "Systèmes": "Systems",
+                    "Unity • Génération procédurale • Équipe de 2": "Unity • Procedural generation • Team of 2",
+                    "Jeu pour explorer la génération procédurale : on incarne un canard (animations, cosmétiques) qui doit fuir des ennemis. Cinématique d'introduction pour le lore et écran de défaite.": "A game to explore procedural generation: you play a duck (animations, cosmetics) who must escape from enemies. Intro cinematic for the lore and a defeat screen.",
+                    "Labyrinthes générés par Simple Room Placement, personnalisés pour un rendu moins organique, et environnements (forêt et ville, sur 2 niveaux) générés par BSP, avec un algorithme runtime optimisé pour faire apparaître la forêt au fil de la partie.": "Labyrinths generated with Simple Room Placement, customised for a less organic look, and environments (forest and city, over 2 levels) generated with BSP, with an optimised runtime algorithm that makes the forest appear as the game progresses.",
+                    "Génération procédurale": "Procedural generation",
+                    "Unity • 3C • Équipe de 2": "Unity • 3C • Team of 2",
+                    "Projet pour appréhender Unity et les 3C (Character, Camera, Controls) : combat au corps à corps contre un ennemi, combat à distance contre un autre, avec interactions avec le décor et des PNJ.": "A project to get to grips with Unity and the 3Cs (Character, Camera, Controls): melee combat against one enemy, ranged combat against another, with environment interactions and NPCs.",
+                    "PNJ": "NPCs",
+                    "Jeu de Combat (Université)": "Fighting Game (University)",
+                    "Développement d'un jeu de combat en utilisant la bibliothèque SDL2.": "Development of a fighting game using the SDL2 library.",
+                    "Démonstration de capacité à travailler avec des outils bas niveau pour la gestion graphique et l'entrée utilisateur.": "Demonstrates the ability to work with low-level tools for graphics handling and user input.",
+                    "Jeu Web (Université)": "Web Game (University)",
+                    "Logique de base": "Basic logic",
+                    "Projet d'introduction à la programmation de jeux avec des bases de logique.": "Introductory game programming project covering basic logic.",
+                    "Création d'un jeu interactif en utilisant des concepts de programmation de base.": "Creation of an interactive game using basic programming concepts.",
+                    "Logique": "Logic",
+                    "Basique": "Basic",
+                    "Interactif": "Interactive",
+                    "Langages": "Languages",
+                    "Moteurs": "Engines",
+                    "API Graphiques": "Graphics APIs",
+                    "Outils": "Tools",
+                    "Mon CV": "My CV",
+                    "Informations Personnelles": "Personal Information",
+                    "Nom Prénom": "Full name",
+                    "Téléphone": "Phone",
+                    "Voir mon profil LinkedIn": "View my LinkedIn profile",
+                    "Localisation": "Location",
+                    "Profil": "Profile",
+                    "Développeur de jeux vidéo passionné par la programmation et l'architecture logicielle. Avec une solide formation mathématique et algorithmique, je cherche à appliquer mes compétences techniques dans un environnement de développement de jeux vidéo, avec un intérêt particulier pour les technologies immersives (VR/AR).": "Video game developer passionate about programming and software architecture. With a solid mathematical and algorithmic background, I want to apply my technical skills in a video game development environment, with a particular interest in immersive technologies (VR/AR).",
+                    "3ème année Gaming Campus": "3rd year, Gaming Campus",
+                    "2ème année Gaming Campus (entrée directe)": "2nd year, Gaming Campus (direct entry)",
+                    "Licence Mathématiques & Informatique (jusqu'au niveau L2)": "Bachelor's programme in Mathematics & Computer Science (up to L2 level)",
+                    "Université Lyon 1": "Lyon 1 University",
+                    "Langues": "Languages",
+                    "Français - Langue maternelle": "French - Native",
+                    "Anglais - C1 (certificat Busuu)": "English - C1 (Busuu certificate)",
+                    "Prêt pour un stage ?": "Ready for an internship?",
+                    "Si vous recherchez un stagiaire passionné et motivé, n'hésitez pas à me contacter pour échanger sur mon profil et mes projets.": "If you are looking for a passionate and motivated intern, feel free to contact me to discuss my profile and my projects.",
+                    "Me contacter par email": "Contact me by email",
+                    "Voir mon GitHub": "View my GitHub",
+                    "Voir mon LinkedIn": "View my LinkedIn",
+                    "© 2026 Yannis Poder - Portfolio - Game Programmer. Tous droits réservés.": "© 2026 Yannis Poder - Portfolio - Game Programmer. All rights reserved."
+                };
+                var ALT = { "Photo de Yannis Poder": "Photo of Yannis Poder" };
+
+                function norm(s) { return s.replace(/\s+/g, " ").trim(); }
+
+                function translateEntries(entries, lang) {
+                    entries.forEach(function (e) {
+                        if (lang === "en") {
+                            var m = e.orig.match(/^(\s*)[\s\S]*?(\s*)$/);
+                            e.node.nodeValue = m[1] + EN[e.key] + m[2];
+                        } else {
+                            e.node.nodeValue = e.orig;
+                        }
+                    });
+                }
+
+                if (typeof module !== "undefined") { module.exports = { EN: EN, translateEntries: translateEntries, norm: norm }; return; }
+
+                var entries = [];
+                function collect() {
+                    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                        acceptNode: function (n) {
+                            var p = n.parentNode && n.parentNode.nodeName;
+                            if (p === "SCRIPT" || p === "STYLE") return NodeFilter.FILTER_REJECT;
+                            var k = norm(n.nodeValue);
+                            return k && Object.prototype.hasOwnProperty.call(EN, k) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+                        }
+                    });
+                    var n;
+                    while ((n = walker.nextNode())) entries.push({ node: n, orig: n.nodeValue, key: norm(n.nodeValue) });
+                }
+
+                function getSaved() {
+                    try { return localStorage.getItem("lang"); } catch (e) { return null; }
+                }
+                function save(l) {
+                    try { localStorage.setItem("lang", l); } catch (e) {}
+                }
+
+                function setLang(lang, persist) {
+                    translateEntries(entries, lang);
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll("img[alt]").forEach(function (img) {
+                        if (!img.dataset.altFr) img.dataset.altFr = img.alt;
+                        img.alt = lang === "en" && ALT[img.dataset.altFr] ? ALT[img.dataset.altFr] : img.dataset.altFr;
+                    });
+                    document.querySelectorAll("[data-lang]").forEach(function (b) {
+                        var on = b.getAttribute("data-lang") === lang;
+                        b.setAttribute("aria-pressed", on ? "true" : "false");
+                        b.classList.toggle("bg-purple-600", on);
+                        b.classList.toggle("text-white", on);
+                        b.classList.toggle("text-gray-300", !on);
+                    });
+                    if (persist) save(lang);
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    collect();
+                    document.querySelectorAll("[data-lang]").forEach(function (b) {
+                        b.addEventListener("click", function () { setLang(b.getAttribute("data-lang"), true); });
+                    });
+                    var q = (new URLSearchParams(location.search).get("lang") || "").toLowerCase();
+                    var lang = q === "en" || q === "fr" ? q : getSaved();
+                    if (lang !== "en" && lang !== "fr") {
+                        lang = (navigator.language || "fr").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+                    }
+                    setLang(lang, false);
+                });
+            })();
+        </script>
     </body>
 </html>
